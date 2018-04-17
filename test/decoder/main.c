@@ -1954,6 +1954,8 @@ int main(WORD32 argc, CHAR *argv[])
     s_app_ctx.display = 0;
 #endif
 
+    s_app_ctx.u4_file_save_flag = 1;//add by xiaoc
+
     /* If display is enabled, then turn off shared mode and get color format that is supported by display */
     if(1 == s_app_ctx.display)
     {
