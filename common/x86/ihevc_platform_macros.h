@@ -211,8 +211,14 @@ static INLINE UWORD32 CTZ(UWORD32 u4_word)
 #define PREFETCH(ptr, type)
 #endif
 
+#ifndef _WIN
 #define MEM_ALIGN8 __attribute__ ((aligned (8)))
 #define MEM_ALIGN16 __attribute__ ((aligned (16)))
 #define MEM_ALIGN32 __attribute__ ((aligned (32)))
+#else
+#define MEM_ALIGN8 
+#define MEM_ALIGN16
+#define MEM_ALIGN32 
+#endif
 
 #endif /* _IHEVC_PLATFORM_MACROS_H_ */
