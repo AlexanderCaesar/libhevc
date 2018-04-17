@@ -73,7 +73,16 @@
 * Concatenates various strings to form a version string
 *******************************************************************************
 */
+#pragma warning(disable:4996)
+
 #define MAXVERSION_STRLEN       511
+#ifdef _WIN
+#define VERSION(version_string, codec_name, codec_release_type, codec_release_ver, codec_vendor)    \
+        sprintf(version_string,                                                     \
+             "@(#)Id:%s_%s Ver:%s Released by %s Build: %s @ %s",                                   \
+             codec_name, codec_release_type, codec_release_ver, codec_vendor, __DATE__, __TIME__)
+#else
+
 #ifdef __ANDROID__
 #define VERSION(version_string, codec_name, codec_release_type, codec_release_ver, codec_vendor)    \
     snprintf(version_string, MAXVERSION_STRLEN,                                                     \
@@ -85,6 +94,8 @@
              "@(#)Id:%s_%s Ver:%s Released by %s Build: %s @ %s",                                   \
              codec_name, codec_release_type, codec_release_ver, codec_vendor, __DATE__, __TIME__)
 #endif
+
+#endif 
 
 /**
 *******************************************************************************

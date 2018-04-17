@@ -62,6 +62,8 @@
 #include <sys/time.h>
 #endif
 
+#pragma warning(disable:4996)
+
 #define ALIGN8(x) ((((x) + 7) >> 3) << 3)
 #define NUM_DISPLAY_BUFFERS 4
 #define DEFAULT_FPS         30
@@ -1506,7 +1508,7 @@ WORD32 display_thread(void *pv_ctx)
 
 
     UWORD32 frm_duration; /* in us */
-    UWORD32 current_time;
+    UWORD32 current_time = 0;
     UWORD32 expected_time;
     TIMER   s_end_timer;
     TIMER   s_first_frame_time;
