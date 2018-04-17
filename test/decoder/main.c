@@ -1758,7 +1758,7 @@ int main(WORD32 argc, CHAR *argv[])
 #endif
 
 #ifdef WINDOWS_TIMER
-    TIMER frequency;
+    LARGE_INTEGER frequency;
 #endif
     WORD32 width = 0, height = 0;
     iv_obj_t *codec_obj;
