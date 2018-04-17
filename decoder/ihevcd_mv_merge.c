@@ -91,6 +91,9 @@
  *
  *******************************************************************************
  */
+#ifdef _WIN
+#pragma warning(disable:4703)
+#endif
 WORD32 ihevcd_compare_pu_t(pu_t *ps_pu_1, pu_t *ps_pu_2)
 {
     WORD32 l0_match = 0, l1_match = 0;

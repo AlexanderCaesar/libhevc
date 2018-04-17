@@ -66,7 +66,11 @@
                             ((UWORD32)x >> 24);
 
 
+#ifndef _WIN
 #define NOP(nop_cnt)    {UWORD32 nop_i; for (nop_i = (nop_cnt) ; nop_i > 0 ; nop_i--) asm("nop");}
+#else
+#define NOP(nop_cnt) 
+#endif
 
 #define POPCNT_U32(x)       __builtin_popcount(x)
 
@@ -137,8 +141,11 @@ static INLINE UWORD32 CTZ(UWORD32 u4_word)
 #endif 
 
 }
-
+#ifndef _WIN
 #define DATA_SYNC()  __sync_synchronize()
+#else
+#define DATA_SYNC()
+#endif 
 
 /**
 ******************************************************************************

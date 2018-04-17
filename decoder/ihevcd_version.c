@@ -73,7 +73,9 @@
 * Concatenates various strings to form a version string
 *******************************************************************************
 */
+#ifdef _WIN
 #pragma warning(disable:4996)
+#endif
 
 #define MAXVERSION_STRLEN       511
 #ifdef _WIN

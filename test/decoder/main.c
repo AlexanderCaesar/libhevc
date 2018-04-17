@@ -62,7 +62,9 @@
 #include <sys/time.h>
 #endif
 
+#ifdef _WIN
 #pragma warning(disable:4996)
+#endif
 
 #define ALIGN8(x) ((((x) + 7) >> 3) << 3)
 #define NUM_DISPLAY_BUFFERS 4
@@ -1510,12 +1512,12 @@ WORD32 display_thread(void *pv_ctx)
     UWORD32 frm_duration; /* in us */
     UWORD32 current_time = 0;
     UWORD32 expected_time;
-    TIMER   s_end_timer;
-    TIMER   s_first_frame_time;
+    //TIMER   s_end_timer;
+    //TIMER   s_first_frame_time;
     UWORD32 first_frame_displayed;
 
 #ifdef WINDOWS_TIMER
-    TIMER frequency;
+    LARGE_INTEGER frequency;
 #endif
 
 #ifdef WINDOWS_TIMER

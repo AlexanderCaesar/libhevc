@@ -54,6 +54,7 @@
 #else
 #include <io.h>
 #include <process.h>
+#include <Windows.h>
 #endif
 
 UWORD32 ithread_get_handle_size(void)
@@ -113,17 +114,30 @@ void ithread_yield(void)
 
 void ithread_sleep(UWORD32 u4_time)
 {
+#ifdef _WIN
+    Sleep(u4_time * 1000);
+#else
     usleep(u4_time * 1000 * 1000);
+#endif
+    
 }
 
 void ithread_msleep(UWORD32 u4_time_ms)
 {
+#ifdef _WIN
+    Sleep(u4_time_ms);
+#else
     usleep(u4_time_ms * 1000);
+#endif
 }
 
 void ithread_usleep(UWORD32 u4_time_us)
 {
+#ifdef _WIN
+    Sleep(u4_time_us/1000);
+#else
     usleep(u4_time_us);
+#endif
 }
 
 UWORD32 ithread_get_sem_struct_size(void)
