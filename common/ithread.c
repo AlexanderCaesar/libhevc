@@ -49,7 +49,12 @@
 #include <pthread.h>
 #include <sched.h>
 #include <semaphore.h>
+#ifndef _WIN
 #include <unistd.h>
+#else
+#include <io.h>
+#include <process.h>
+#endif
 
 UWORD32 ithread_get_handle_size(void)
 {
