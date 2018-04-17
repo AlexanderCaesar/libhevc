@@ -71,7 +71,12 @@
 #define POPCNT_U32(x)       __builtin_popcount(x)
 
 #define PLD(a)
+
+#ifndef _WIN32
 #define INLINE inline
+#else
+#define INLINE
+#endif 
 
 static INLINE UWORD32 CLZ(UWORD32 u4_word)
 {

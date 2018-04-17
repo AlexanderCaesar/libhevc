@@ -13,5 +13,507 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\common">
+      <UniqueIdentifier>{4c51e4eb-4851-4bae-913c-eb759a8096e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\decoder">
+      <UniqueIdentifier>{dd23709b-a753-42ad-8107-e62e9a95addf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\common">
+      <UniqueIdentifier>{d3942f1b-530c-4067-8fda-10de30805f5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\decoder">
+      <UniqueIdentifier>{a20dbccd-1e8c-443c-a8ae-28afaba124cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\decoder\x86">
+      <UniqueIdentifier>{e204e04c-cdc7-4a01-9209-bfc5295c712f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\common\x86">
+      <UniqueIdentifier>{1e64764e-9367-4fe9-80b9-44ece2e0fe72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\decoder\ihevcd_api.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_bitstream.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_boundary_strength.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_cabac.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_common_tables.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_deblk.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_decode.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_fmt_conv.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_get_mv.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_ilf_padding.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_inter_pred.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_intra_pred_mode_prediction.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_iquant_itrans_recon_ctb.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_itrans_recon_dc.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_job_queue.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_mv_merge.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_mv_pred.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_nal.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_parse_headers.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_parse_residual.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_parse_slice.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_parse_slice_header.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_process_slice.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_ref_list.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_sao.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_utils.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\ihevcd_version.c">
+      <Filter>源文件\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\x86\ihevcd_fmt_conv_ssse3_intr.c">
+      <Filter>源文件\decoder\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\x86\ihevcd_function_selector.c">
+      <Filter>源文件\decoder\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\x86\ihevcd_function_selector_generic.c">
+      <Filter>源文件\decoder\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\x86\ihevcd_function_selector_sse42.c">
+      <Filter>源文件\decoder\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\x86\ihevcd_function_selector_ssse3.c">
+      <Filter>源文件\decoder\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\x86\ihevcd_it_rec_dc_sse42_intr.c">
+      <Filter>源文件\decoder\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\x86\ihevcd_it_rec_dc_ssse3_intr.c">
+      <Filter>源文件\decoder\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_buf_mgr.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_cabac_tables.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_chroma_intra_pred_filters.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_chroma_iquant_itrans_recon.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_chroma_iquant_recon.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_chroma_itrans_recon.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_chroma_itrans_recon_8x8.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_chroma_itrans_recon_16x16.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_chroma_recon.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_common_tables.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_deblk_edge_filter.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_deblk_tables.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_disp_mgr.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_dpb_mgr.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_inter_pred_filters.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_intra_pred_filters.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_iquant_itrans_recon.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_iquant_recon.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_itrans.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_itrans_recon.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_itrans_recon_8x8.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_itrans_recon_16x16.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_itrans_recon_32x32.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_mem_fns.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_padding.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_quant_tables.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_recon.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_sao.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_trans_tables.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ihevc_weighted_pred.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ithread.c">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_16x16_itrans_recon_sse42_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_32x32_itrans_recon_sse42_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_chroma_intra_pred_filters_sse42_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_chroma_intra_pred_filters_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_deblk_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_inter_pred_filters_sse42_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_inter_pred_filters_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_intra_pred_filters_sse42_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_intra_pred_filters_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_itrans_recon_16x16_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_itrans_recon_32x32_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_itrans_recon_sse42_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_itrans_recon_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_mem_fns_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_padding_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_sao_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_tables_x86_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_weighted_pred_sse42_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\x86\ihevc_weighted_pred_ssse3_intr.c">
+      <Filter>源文件\common\x86</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\decoder\ihevcd_bitstream.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_boundary_strength.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_cabac.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_common_tables.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_cxa.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_deblk.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_debug.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_decode.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_defs.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_error.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_fmt_conv.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_func_types.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_function_selector.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_get_mv.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_ilf_padding.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_inter_pred.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_intra_pred_mode_prediction.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_iquant_itrans_recon_ctb.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_itrans_recon_dc.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_ittiam_logo.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_job_queue.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_mv_merge.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_mv_pred.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_nal.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_parse_headers.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_parse_residual.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_parse_slice.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_parse_slice_header.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_process_slice.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_profile.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_ref_list.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_sao.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_statistics.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_structs.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_trace.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\decoder\ihevcd_utils.h">
+      <Filter>头文件\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_buf_mgr.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_cabac_tables.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_chroma_intra_pred.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_chroma_iquant_itrans_recon.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_chroma_iquant_recon.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_chroma_itrans_recon.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_chroma_recon.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_common_tables.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_deblk.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_deblk_tables.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_debug.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_defs.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_disp_mgr.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_dpb_mgr.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_error.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_func_types.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_inter_pred.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_intra_pred.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_iquant_itrans_recon.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_iquant_recon.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_itrans.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_itrans_recon.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_macros.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_mem_fns.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_padding.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_quant_tables.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_recon.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_sao.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_structs.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_tables_x86_intr.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_trans.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_trans_macros.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_trans_tables.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_typedefs.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ihevc_weighted_pred.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ithread.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\iv.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ivd.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\x86\ihevc_func_selector.h">
+      <Filter>源文件\common\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\x86\ihevc_platform_macros.h">
+      <Filter>源文件\common\x86</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
