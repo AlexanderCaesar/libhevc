@@ -1,4 +1,4 @@
-/******************************************************************************
+﻿/******************************************************************************
 *
 * Copyright (C) 2012 Ittiam Systems Pvt Ltd, Bangalore
 *
@@ -72,7 +72,7 @@
 
 #define PLD(a)
 
-#ifndef _WIN32
+#ifndef _WIN
 #define INLINE inline
 #else
 #define INLINE
@@ -80,25 +80,62 @@
 
 static INLINE UWORD32 CLZ(UWORD32 u4_word)
 {
-    if(u4_word)
+#ifndef _WIN
+    if (u4_word)
         return (__builtin_clz(u4_word));
+#else
+    if (u4_word)
+    {
+        int c = 0;
+        while ((u4_word & 0x80000000) == 0)
+        {
+            c++;
+            u4_word <<= 1;
+        }
+        return c;
+    }
+#endif
     else
         return 32;
 }
 static INLINE UWORD32 CLZNZ(UWORD32 u4_word)
 {
-   return (__builtin_clz(u4_word));
+#ifndef _WIN
+    return (__builtin_clz(u4_word));
+#else
+    int c = 0;
+    while ((u4_word & 0x80000000) == 0)
+    {
+        c++;
+        u4_word <<= 1;
+    }
+    return c;
+#endif 
 }
 static INLINE UWORD32 CTZ(UWORD32 u4_word)
 {
     if(0 == u4_word)
         return 31;
+#ifndef _WIN
     else
     {
         unsigned int index;
         index = __builtin_ctz(u4_word);
         return (UWORD32)index;
     }
+#else
+    else
+    {
+        int c = 0;
+        while ((u4_word & 1) == 0)
+        {
+            c++;
+            u4_word >>= 1;
+        }
+        return c;
+    }
+#endif 
+
 }
 
 #define DATA_SYNC()  __sync_synchronize()
