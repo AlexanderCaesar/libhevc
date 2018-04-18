@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B92C3DA5-0FBD-4B6F-9827-5B4066A72840}</ProjectGuid>
+    <RootNamespace>libhevcdec</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>../../common;../../common/x86;../../decoder;../../decoder/x86;../../thirdparty/pthreads/include;$(IncludePath)</IncludePath>
+    <LibraryPath>../../thirdparty/pthreads/lib/x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>../../common;../../common/x86;../../decoder;../../decoder/x86;../../thirdparty/pthreads/include;$(IncludePath)</IncludePath>
+    <LibraryPath>../../thirdparty/pthreads/lib/x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN;X86_MSVC;DISABLE_AVX2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN;X86_MSVC;DISABLE_AVX2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\common\ihevc_buf_mgr.c" />
+    <ClCompile Include="..\..\common\ihevc_cabac_tables.c" />
+    <ClCompile Include="..\..\common\ihevc_chroma_intra_pred_filters.c" />
+    <ClCompile Include="..\..\common\ihevc_chroma_iquant_itrans_recon.c" />
+    <ClCompile Include="..\..\common\ihevc_chroma_iquant_recon.c" />
+    <ClCompile Include="..\..\common\ihevc_chroma_itrans_recon.c" />
+    <ClCompile Include="..\..\common\ihevc_chroma_itrans_recon_16x16.c" />
+    <ClCompile Include="..\..\common\ihevc_chroma_itrans_recon_8x8.c" />
+    <ClCompile Include="..\..\common\ihevc_chroma_recon.c" />
+    <ClCompile Include="..\..\common\ihevc_common_tables.c" />
+    <ClCompile Include="..\..\common\ihevc_deblk_edge_filter.c" />
+    <ClCompile Include="..\..\common\ihevc_deblk_tables.c" />
+    <ClCompile Include="..\..\common\ihevc_disp_mgr.c" />
+    <ClCompile Include="..\..\common\ihevc_dpb_mgr.c" />
+    <ClCompile Include="..\..\common\ihevc_inter_pred_filters.c" />
+    <ClCompile Include="..\..\common\ihevc_intra_pred_filters.c" />
+    <ClCompile Include="..\..\common\ihevc_iquant_itrans_recon.c" />
+    <ClCompile Include="..\..\common\ihevc_iquant_recon.c" />
+    <ClCompile Include="..\..\common\ihevc_itrans.c" />
+    <ClCompile Include="..\..\common\ihevc_itrans_recon.c" />
+    <ClCompile Include="..\..\common\ihevc_itrans_recon_16x16.c" />
+    <ClCompile Include="..\..\common\ihevc_itrans_recon_32x32.c" />
+    <ClCompile Include="..\..\common\ihevc_itrans_recon_8x8.c" />
+    <ClCompile Include="..\..\common\ihevc_mem_fns.c" />
+    <ClCompile Include="..\..\common\ihevc_padding.c" />
+    <ClCompile Include="..\..\common\ihevc_quant_tables.c" />
+    <ClCompile Include="..\..\common\ihevc_recon.c" />
+    <ClCompile Include="..\..\common\ihevc_sao.c" />
+    <ClCompile Include="..\..\common\ihevc_trans_tables.c" />
+    <ClCompile Include="..\..\common\ihevc_weighted_pred.c" />
+    <ClCompile Include="..\..\common\ithread.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_16x16_itrans_recon_sse42_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_32x32_itrans_recon_sse42_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_chroma_intra_pred_filters_sse42_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_chroma_intra_pred_filters_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_deblk_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_inter_pred_filters_sse42_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_inter_pred_filters_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_intra_pred_filters_sse42_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_intra_pred_filters_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_itrans_recon_16x16_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_itrans_recon_32x32_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_itrans_recon_sse42_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_itrans_recon_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_mem_fns_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_padding_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_sao_ssse3_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_tables_x86_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_weighted_pred_sse42_intr.c" />
+    <ClCompile Include="..\..\common\x86\ihevc_weighted_pred_ssse3_intr.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_api.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_bitstream.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_boundary_strength.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_cabac.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_common_tables.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_deblk.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_decode.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_fmt_conv.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_get_mv.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_ilf_padding.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_inter_pred.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_intra_pred_mode_prediction.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_iquant_itrans_recon_ctb.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_itrans_recon_dc.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_job_queue.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_mv_merge.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_mv_pred.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_nal.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_parse_headers.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_parse_residual.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_parse_slice.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_parse_slice_header.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_process_slice.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_ref_list.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_sao.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_utils.c" />
+    <ClCompile Include="..\..\decoder\ihevcd_version.c" />
+    <ClCompile Include="..\..\decoder\x86\ihevcd_fmt_conv_ssse3_intr.c" />
+    <ClCompile Include="..\..\decoder\x86\ihevcd_function_selector.c" />
+    <ClCompile Include="..\..\decoder\x86\ihevcd_function_selector_generic.c" />
+    <ClCompile Include="..\..\decoder\x86\ihevcd_function_selector_sse42.c" />
+    <ClCompile Include="..\..\decoder\x86\ihevcd_function_selector_ssse3.c" />
+    <ClCompile Include="..\..\decoder\x86\ihevcd_it_rec_dc_sse42_intr.c" />
+    <ClCompile Include="..\..\decoder\x86\ihevcd_it_rec_dc_ssse3_intr.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\common\ihevc_buf_mgr.h" />
+    <ClInclude Include="..\..\common\ihevc_cabac_tables.h" />
+    <ClInclude Include="..\..\common\ihevc_chroma_intra_pred.h" />
+    <ClInclude Include="..\..\common\ihevc_chroma_iquant_itrans_recon.h" />
+    <ClInclude Include="..\..\common\ihevc_chroma_iquant_recon.h" />
+    <ClInclude Include="..\..\common\ihevc_chroma_itrans_recon.h" />
+    <ClInclude Include="..\..\common\ihevc_chroma_recon.h" />
+    <ClInclude Include="..\..\common\ihevc_common_tables.h" />
+    <ClInclude Include="..\..\common\ihevc_deblk.h" />
+    <ClInclude Include="..\..\common\ihevc_deblk_tables.h" />
+    <ClInclude Include="..\..\common\ihevc_debug.h" />
+    <ClInclude Include="..\..\common\ihevc_defs.h" />
+    <ClInclude Include="..\..\common\ihevc_disp_mgr.h" />
+    <ClInclude Include="..\..\common\ihevc_dpb_mgr.h" />
+    <ClInclude Include="..\..\common\ihevc_error.h" />
+    <ClInclude Include="..\..\common\ihevc_func_types.h" />
+    <ClInclude Include="..\..\common\ihevc_inter_pred.h" />
+    <ClInclude Include="..\..\common\ihevc_intra_pred.h" />
+    <ClInclude Include="..\..\common\ihevc_iquant_itrans_recon.h" />
+    <ClInclude Include="..\..\common\ihevc_iquant_recon.h" />
+    <ClInclude Include="..\..\common\ihevc_itrans.h" />
+    <ClInclude Include="..\..\common\ihevc_itrans_recon.h" />
+    <ClInclude Include="..\..\common\ihevc_macros.h" />
+    <ClInclude Include="..\..\common\ihevc_mem_fns.h" />
+    <ClInclude Include="..\..\common\ihevc_padding.h" />
+    <ClInclude Include="..\..\common\ihevc_quant_tables.h" />
+    <ClInclude Include="..\..\common\ihevc_recon.h" />
+    <ClInclude Include="..\..\common\ihevc_sao.h" />
+    <ClInclude Include="..\..\common\ihevc_structs.h" />
+    <ClInclude Include="..\..\common\ihevc_tables_x86_intr.h" />
+    <ClInclude Include="..\..\common\ihevc_trans.h" />
+    <ClInclude Include="..\..\common\ihevc_trans_macros.h" />
+    <ClInclude Include="..\..\common\ihevc_trans_tables.h" />
+    <ClInclude Include="..\..\common\ihevc_typedefs.h" />
+    <ClInclude Include="..\..\common\ihevc_weighted_pred.h" />
+    <ClInclude Include="..\..\common\ithread.h" />
+    <ClInclude Include="..\..\common\iv.h" />
+    <ClInclude Include="..\..\common\ivd.h" />
+    <ClInclude Include="..\..\common\x86\ihevc_func_selector.h" />
+    <ClInclude Include="..\..\common\x86\ihevc_platform_macros.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_bitstream.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_boundary_strength.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_cabac.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_common_tables.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_cxa.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_deblk.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_debug.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_decode.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_defs.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_error.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_fmt_conv.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_function_selector.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_func_types.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_get_mv.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_ilf_padding.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_inter_pred.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_intra_pred_mode_prediction.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_iquant_itrans_recon_ctb.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_itrans_recon_dc.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_ittiam_logo.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_job_queue.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_mv_merge.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_mv_pred.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_nal.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_parse_headers.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_parse_residual.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_parse_slice.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_parse_slice_header.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_process_slice.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_profile.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_ref_list.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_sao.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_statistics.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_structs.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_trace.h" />
+    <ClInclude Include="..\..\decoder\ihevcd_utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
