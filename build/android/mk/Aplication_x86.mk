@@ -1,0 +1,2 @@
+APP_ABI := x86
+LIBHEVC_X86 = true
